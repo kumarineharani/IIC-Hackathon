@@ -1,0 +1,1 @@
+add all the images of persons here in subfolder named after them inside this dataset folder
