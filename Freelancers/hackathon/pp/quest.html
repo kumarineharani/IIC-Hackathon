@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Quest</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .quest { margin-bottom: 20px; padding: 10px; border: 2px solid #ccc; border-radius: 7px; }
+        .completed { text-decoration: line-through; color: yellow; }
+    </style>
+</head>
+<body>
+    <h1>Create a Quest</h1>
+    <font size="3">
+      Trotana simplifies reporting and resolving bugs. Helping you cut time to fix customer issues . Improve product qualify.
+    </font>
+    <h2>Happier Team</h2>
+    <form action="/add" method="post">
+        <input type="text" name="title" placeholder="Quest Title" required>
+        <input type="text" name="description" placeholder="Quest Description" required>
+        <button type="submit">Add Quest</button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Finding Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bug Finder</h1>
+        <p>Submit a bug description and find solutions.</p>
+    </header>
+
+    <main>
+        <form id="bugForm">
+            <label for="bugTitle">Bug Title:</label>
+            <input type="text" id="bugTitle" name="bugTitle" required>
+            
+            <label for="bugDescription">Bug Description:</label>
+            <textarea id="bugDescription" name="bugDescription" required></textarea>
+            <button type="button" onclick="login()">sign up</button>
+            
+            <button type="button" ><a href="../login page/login.html">login</a></button> 
+            <button type="submit">Submit Bug</button>
+        </form>
+
+        <section id="bugList">
+            <h2>Submitted Bugs</h2>
+            <ul id="bugItems">
+
+                <!-- Bug items will appear here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bug Finder</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
