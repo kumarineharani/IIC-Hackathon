@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Media Blocker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Focus Flow</h1>
+    <div class="timer-container">
+      <div id="timerDisplay" class="timer">00:00:00</div>
+      <div class="timer-input">
+        <input type="number" id="customMinutes" min="1" max="180" placeholder="Enter minutes" class="time-input">
+        <span class="time-label">minutes</span>
+      </div>
+      <div class="timer-options">
+        <button class="timer-button" data-minutes="10">10 min</button>
+        <button class="timer-button" data-minutes="20">20 min</button>
+        <button class="timer-button" data-minutes="30">30 min</button>
+      </div>
+      <button id="startTimer" class="start-button" disabled>Start Focus Time</button>
+    </div>
+    
+    <div class="sites-container">
+      <h2>Manage Sites</h2>
+      <div class="site-list">
+        <div class="site-item" data-site="facebook">
+          <span class="site-name">Facebook</span>
+          <button class="toggle-button">Unblocked</button>
+        </div>
+        <div class="site-item" data-site="instagram">
+          <span class="site-name">Instagram</span>
+          <button class="toggle-button">Unblocked</button>
+        </div>
+        <div class="site-item" data-site="tiktok">
+          <span class="site-name">TikTok</span>
+          <button class="toggle-button">Unblocked</button>
+        </div>
+        <div class="site-item" data-site="reddit">
+          <span class="site-name">Reddit</span>
+          <button class="toggle-button">Unblocked</button>
+        </div>
+      </div>
+      <p class="sites-help">
+        "Made by Team Champs"</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
