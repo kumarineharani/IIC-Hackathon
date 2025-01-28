@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour and Travel - Thailand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="thailand.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Explore Our Thailand Tour Packages</h1>
+    </header>
+
+    <section class="package-list">
+        <h3>Our Thailand Tour Packages</h3>
+        <div class="package-container">
+            <!-- Package 1 -->
+            <div class="package" id="package1">
+                <img src="thailand pic1.jpg" alt="Thailand" class="package-img">
+                <h4>Most Wanted Thailand Package</h4>
+                <p>Duration: 6N/7D</p>
+                <p>Locations: Bangkok, Chiang Mai, Phuket</p>
+                <p>Includes: 10 Activities, Round Trip Flights, 3 Star Hotels</p>
+                <div class="price">₹49,820 /Person</div>
+                <button onclick="showPackageDetails('package1')">View Details</button>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="package" id="package2">
+                <img src="thailand pic2.jpg" alt="Thailand" class="package-img">
+                <h4>Luxury Thailand Experience</h4>
+                <p>Duration: 7N/8D</p>
+                <p>Locations: Bangkok, Chiang Mai, Phuket, Krabi</p>
+                <p>Includes: 12 Activities, Premium Flights, 5 Star Hotels</p>
+                <div class="price">₹89,820 /Person</div>
+                <button onclick="showPackageDetails('package2')">View Details</button>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="package" id="package3">
+                <img src="thailand pic3.jpg" alt="Thailand" class="package-img">
+                <h4>Peaceful Thailand Holiday</h4>
+                <p>Duration: 5N/6D</p>
+                <p>1N Chiang Mai 2N Phuket 2N Bangkok</p>
+                <p>Includes: 8 Activities, Round Trip Flights, 4 Star Hotels</p>
+                <div class="price">₹35,000 /Person</div>
+                <button onclick="showPackageDetails('package3')">View Details</button>
+            </div>
+
+            <!-- Package 4 -->
+            <div class="package" id="package4">
+                <img src="thailand pic4.jpg" alt="Thailand" class="package-img">
+                <h4>Appealing Thailand to Phuket</h4>
+                <p>Duration: 8N/9D</p>
+                <p>2N Bangkok 1N Pattaya 2N Phuket 1N Krabi</p>
+                <p>Includes: 9 Activities, Premium Flights, 3 Star Hotels</p>
+                <div class="price">₹60,000 /Person</div>
+                <button onclick="showPackageDetails('package4')">View Details</button>
+            </div>
+
+            <!-- Package 5 -->
+            <div class="package" id="package5">
+                <img src="thailand pic5.jpg" alt="Thailand" class="package-img">
+                <h4>Mystical Thailand Vacation</h4>
+                <p>Duration: 6N/7D</p>
+                <p>Locations: 1N Bangkok Houseboat 1N Phuket 2N Krabi 1N Chiang Mai</p>
+                <p>Includes: 7 Activities, Round Trip Flights, 3 Star Hotels</p>
+                <div class="price">₹45,000 /Person</div>
+                <button onclick="showPackageDetails('package5')">View Details</button>
+            </div>
+
+            <!-- Package 6 -->
+            <div class="package" id="package6">
+                <img src="thailand pic6.jpg" alt="Thailand" class="package-img">
+                <h4>Stunning Thailand</h4>
+                <p>Duration: 4N/5D</p>
+                <p>Locations: 1N Bangkok Houseboat 1N Phuket 2N Krabi</p>
+                <p>Includes: 5 Activities, Round Trip Flights, 3 Star Hotels</p>
+                <div class="price">₹25,000 /Person</div>
+                <button onclick="showPackageDetails('package6')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section class="customization">
+        <h3>Customize Your Package</h3>
+        <div class="options">
+            <label for="hotel">Choose Hotel Star Rating:</label>
+            <select id="hotel">
+                <option value="1">1 Star</option>
+                <option value="2">2 Star</option>
+                <option value="3">3 Star</option>
+                <option value="4">4 Star</option>
+                <option value="5">5 Star</option>
+            </select>
+
+            <label for="rent">Car/Bike Rental:</label>
+            <select id="rent">
+                <option value="0">None</option>
+                <option value="car">Car Rental - ₹5000</option>
+                <option value="bike">Bike Rental - ₹2000</option>
+            </select>
+
+            <label for="flight">Add Round Trip Flight: ₹10,000</label>
+            <input type="checkbox" id="flight" data-price="10000">
+
+            <label for="train">Add Train Tickets: ₹5,000</label>
+            <input type="checkbox" id="train" data-price="5000">
+
+            <label for="activities">Add Activities (₹500 each):</label>
+            <input type="number" id="activities" min="0" value="0">
+
+            <label for="extraMeals">Add Extra Meals (₹800 each):</label>
+            <input type="number" id="extraMeals" min="0" value="0">
+
+            <label for="guide">Add Personal Guide: ₹2,000</label>
+            <input type="checkbox" id="guide" data-price="2000">
+
+            <button id="calculatePrice">Calculate Price</button>
+        </div>
+
+        <div class="total-price">
+            <h4>Total Price: ₹<span id="totalPrice">49,820</span></h4>
+        </div>
+    </section>
+
+    <script src="thailand.js"></script>
+</body>
+</html>

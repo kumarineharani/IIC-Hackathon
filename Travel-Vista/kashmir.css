@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Package List Section */
+.package-list h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.package-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.package {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.package:hover {
+    transform: translateY(-5px);
+}
+
+.package-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4caf50;
+    margin: 10px 0;
+}
+
+button {
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #3e8e41;
+}
+
+/* Customization Section */
+.customization {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.customization h3 {
+    font-size: 1.8rem;
+    color: #4caf50;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.options label {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.options select,
+.options input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+.options select:focus,
+.options input:focus {
+    outline: none;
+    border: 1px solid #4caf50;
+}
+
+button#calculatePrice {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button#calculatePrice:hover {
+    background-color: #3e8e41;
+}
+
+.total-price {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
