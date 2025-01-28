@@ -1,0 +1,52 @@
+.stall-list {
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.stall {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.stall:hover {
+    transform: scale(1.05);
+}
+
+.stall img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.stall h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #444;
+}
+
+.stall p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.stall ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.stall ul li {
+    font-size: 14px;
+    color: #666;
+}

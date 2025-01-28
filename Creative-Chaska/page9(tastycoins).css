@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(233, 96, 46);
+  }
+  
+  .tasty-coins-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background: linear-gradient(45deg, #f8c23c, #da7e0c);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  .coins-display {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .coins-display p {
+    font-size: 1.2rem;
+  }
+  
+  #total-coins {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color:rgb(229, 227, 224);
+  }
+  
+  button {
+    background-color: #ff9100;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff6d00;
+  }
+  
+  .coins-info {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #fff8e1;
+  }
+  
