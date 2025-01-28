@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="page2(register).css">
+</head>
+<body>
+  <div class="register-container">
+    <h1>Register</h1>
+    <p>Select your role and fill in the necessary details.</p>
+    <form id="register-form">
+      <!-- Role selection -->
+      <label for="role">Role:</label>
+      <select id="role" name="role" onchange="toggleRoleFields()" required>
+        <option value="" disabled selected>Select your role</option>
+        <option value="admin">Admin</option>
+        <option value="vendor">Vendor</option>
+        <option value="customer">Customer</option>
+      </select>
+
+      <!-- Common fields -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <!-- Admin-specific fields -->
+      <div id="admin-fields" class="role-fields" style="display: none;">
+        <label for="admin-key">Admin Key:</label>
+        <input type="text" id="admin-key" name="admin-key" placeholder="Enter the admin key">
+      </div>
+
+      <!-- Vendor-specific fields -->
+      <div id="vendor-fields" class="role-fields" style="display: none;">
+        <label for="Stall-name">Stall Name:</label>
+        <input type="text" id="Stall-name" name="Stall-name" placeholder="Enter your stall name">
+
+        <label for="FSSAI-number">GST Number:</label>
+        <input type="text" id="FSSAI-number" name="FSSAI-number" placeholder="Enter your FSSAI number">
+      </div>
+
+      <!-- Customer-specific fields -->
+      <div id="customer-fields" class="role-fields" style="display: none;">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script src="page2(register).js"></script>
+</body>
+</html>

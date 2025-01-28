@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review System</title>
+    <link rel="stylesheet" href="page1(rate).css">
+</head>
+<body>
+    <div class="review-container">
+        <h1>Rate the Food Stall</h1>
+
+        <!-- Hygiene Rating -->
+        <div class="rating-group">
+            <label for="hygiene">Hygiene:</label>
+            <div class="stars" id="hygiene-stars" data-category="hygiene">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="hygiene-rating">Rating: 0</p>
+        </div>
+
+        <!-- Taste Rating -->
+        <div class="rating-group">
+            <label for="taste">Taste:</label>
+            <div class="stars" id="taste-stars" data-category="taste">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="taste-rating">Rating: 0</p>
+        </div>
+
+        <!-- Price Rating -->
+        <div class="rating-group">
+            <label for="price">Price:</label>
+            <div class="stars" id="price-stars" data-category="price">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p id="price-rating">Rating: 0</p>
+        </div>
+
+        <!-- Review Text -->
+        <textarea id="review-text" placeholder="Write your review here..." rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <button id="submit-review">Submit Review</button>
+
+        <!-- Display Reviews -->
+        <div id="reviews-container">
+            <h2>User Reviews</h2>
+            <ul id="reviews-list"></ul>
+        </div>
+    </div>
+
+    <script src="page1(rate).js"></script>
+</body>
+</html>
