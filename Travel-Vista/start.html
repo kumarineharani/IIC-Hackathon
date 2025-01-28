@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tour and travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="start.css">
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Hotels</a>
+        <a href="#">Contact us</a>
+        
+    </nav>
+
+    <header>
+       <pre><h1>Vacation<span class="span1"> Package</span></h1></pre> 
+        <h1><span class="span2">Explore the latest package and find the best deals!</span></h1>
+    </header>
+
+    <div class="container">
+        <!-- Search Section -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for location or trips..." />
+            <button>Search</button>
+        </div>
+
+        <!-- Shop Listings Section -->
+        <div class="list-section">
+            <div class="search-bar">
+            </div>
+            <div class="items-list" id="shopList">
+                <div class="card" data-distance="5" data-rating="4.5">
+                    <div class="picture"></div>
+                    <img src="kashmir2.jpg" alt="kashmir">
+                    <h3>Kashmir</h3>
+                    <button> <a href="kashmir.html">view details</a></button>
+                </div>
+                <div class="card" data-distance="3" data-rating="3.0">
+                    <img src="rajasthani.jpg">
+                    <h3>Rajasthan</h3>
+                    <button>View Details</button>
+                </div>
+                <div class="card" data-distance="8" data-rating="5.0">
+                    <img src="goa.jpg">
+                    <h3>Goa</h3>
+                    <button>View Details</button>
+                </div>
+                <div class="card" data-distance="2" data-rating="4.2">
+                    <img src="himanchal.jpg">
+                    <h3>Himanchal Pradesh</h3>
+                    <button>View Details</button>
+                </div>
+                <div class="card" data-distance="7" data-rating="3.5">
+                    <img src="prayagraj.webp">
+                    <h3>Prayagraj</h3>
+                    <button>View Details</button>
+                </div>         
+                <div class="card" data-distance="4" data-rating="4.8">
+                    <img src="banaras.jpg">
+                    <h3>Banaras</h3>
+                    <button>View Details</button>
+                </div>
+           
+            </div>
+            <button class="view-more-button" id="viewMoreShops" onclick="showMore('shopList', 6)">View More</button>
+        </div>
+
+        <!-- Clothing Listings Section -->
+        <div class="list-section">
+            <h2 class="section-title">International Destinations!</h2>
+            <div class="search-bar">
+            
+            </div>
+            <div class="items-list" id="clothingList">
+                <!-- Clothing Items (Initially 6 visible, rest hidden) -->
+                <div class="card men" data-price="2000">
+                    <img src="thailand.jpg" alt="Clothing 1">
+                    <h3>Thailand</h3>
+                    <button><a href="thailand.html">View Details</a></button>
+                </div>
+                <div class="card women" data-price="1500">
+                    <img src="dubai.webp" alt="Clothing 2">
+                    <h3>Dubai</h3>
+                    <button>View Details</button>
+                </div>
+                <div class="card men" data-price="2500">
+                    <img src="australia.jpg" alt="Clothing 3">
+                    <h3>Australia</h3>
+                    <button>View Details</button>
+                </div>
+                <div class="card kids" data-price="1000">
+                    <img src="malaysia.jpg" alt="Clothing 4">
+                    <h3>Malaysia</h3>
+                    <button>View Details</button>
+                </div>
+                <div class="card women" data-price="1800">
+                    <img src="maldives.jpg" alt="Clothing 5">
+                    <h3>Maldives</h3>
+                    <button>View Details</button>
+                </div>
+                <div class="card men" data-price="2200">
+                    <img src="singapore.jpg" alt="Clothing 6">
+                    <h3>Singapore</h3>
+                    <button>View Details</button>
+                </div>
+            </div>
+            <button class="view-more-button" id="viewMoreClothing" onclick="showMore('clothingList', 6)">View More</button>
+        </div>
+    </div>
+
+    <script src="start.js"></script>
+</body>
+</html>
