@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Detection System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .hospital-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .hospital {
+            flex: 1 1 calc(33.333% - 20px);
+            padding: 20px;
+            background-color: #e8f5e9;
+            border: 1px solid #4CAF50;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hospital h3 {
+            margin: 0 0 10px;
+            color: #4CAF50;
+        }
+
+        .hospital p {
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* blood css*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f8f8f8;
+  }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Accident Detection System</h1>
+</header>
+
+<nav>
+    <a href="#home" onclick="showPage('home')">Home</a>
+    <a href="#hospital" onclick="showPage('hospital')">Hospital</a>
+    <a href="#bloodbank" onclick="showPage('bloodbank')">Blood Bank</a>
+    <a href="#contact" onclick="showPage('contact')">Contact</a>
+    <a href="#login" onclick="showPage('login')">Login</a>
+    <a href="#register" onclick="showPage('register')">Register</a>
+    <a href="#logout" onclick="logout()">Logout</a>
+</nav>
+
+<div class="container" id="home">
+    <h2>Welcome to the Accident Detection System</h2>
+    <p>This system monitors and detects potential accidents using sensor data and alerts emergency contacts immediately.</p>
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="https://media.istockphoto.com/id/1016769248/photo/photo-of-helmet-and-motorcycle-on-the-road-the-concept-of-road-accidents.jpg?s=612x612&w=0&k=20&c=Ju9QguO2CzKO-xXQkngw2B9O7IbLN_W7JMcOmBo1mI4=" alt="Slide 1">
+            <img src="https://media.istockphoto.com/id/187062420/photo/rear-ended.jpg?s=612x612&w=0&k=20&c=pf53CAoID0eWDSrU8dCCNGG4-d-uoaxWBo51uABnxEY=" alt="Slide 2">
+            <img src="https://media.istockphoto.com/id/831621716/photo/hit-and-run-concept-view-on-injured-man-on-road-in-rear-mirror-of-a-car.jpg?s=612x612&w=0&k=20&c=9B4Ny-LsVOgpU8NqBLyrN_X4vluPTvCvmCrYeMtuwUs=" alt="Slide 3">
+        </div>
+    </div>
+    <div class="hospital-list">
+        <div class="hospital">
+            <h3>RIMS Hospital Ranchi</h3>
+            <p>Address:Rajendra Institute of Medical Sciences (RIMS), Bariatu Road, Ranchi, Jharkhand</p>
+            <p>Phone: +1-800-111-2222</p>
+            <a href="https://rimsranchi.ac.in/">Visit</a>
+
+        </div>
+        <div class="hospital">
+            <h3>Raj Hospital</h3>
+            <p>Address: 456 Oak Avenue, Springfield</p>
+            <p>Phone: +1-800-333-4444</p>
+            <a href="https://rajhospitals.com/">visit</a>
+
+        </div>
+        <div class="hospital">
+            <h3>Pulse Hospital</h3>
+            <p>Address: near, Harihar Singh Road, opposite Petrol Pump, Morabadi, Ranchi, Jharkhand 834009</p>
+            <p>Phone: +1-800-555-6666</p>
+            <a href="https://data.cms.gov/tools/medicare-revalidation-list/provider/O20211203000205">visit</a>
+        
+
+        </div>
+        <div class="hospital">
+            <h3>santevita Center</h3>
+            <p>Address: ranchi</p>
+            <p>Phone: +1-800-777-8888</p>
+            <a href="https://www.santevitahospital.com/">visit</a>
+        </div>
+        <div class="hospital">
+            <h3>orchild Hospital</h3>
+            <p>Address: lalpur,ranchi</p>
+            <p>Phone: +1-800-999-0000</p>
+            <a href="https://www.orchidmedcentre.com/">visit</a>
+        </div>
+        <div class="hospital">
+            <h3>vardaanhospital</h3>
+            <p>Address: Block road, kathi tand chowk ratu ranchi</p>
+            <p>Phone: +91 7070094156</p>
+            <a href="http://https://data.cms.gov/tools/medicare-revalidation-list/provider/O20211203000205">visit</a>
+        </div>
+    </div>
+</div>
+
+<!--hospital details-->
+<div class="container" id="hospital" style="display: none;">
+    <h2>Hospital</h2>
+    <form id="hospital">
+        <label for="name">Hospital Name:</label>
+        <input type="text" id="name" required>
+  
+        <label for="bloodType">Address:</label>
+        <input type="text" id="hospitaltype" required>
+  
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" required>
+        
+        <button type="submit">Register</button>
+      </form>
+</div>
+
+<!--bllod bank-->
+<div class="container" id="bloodbank" style="display: none;">
+    <h2>blood bank</h2>
+    <form id="donorForm">
+        <label for="name">Donor Name:</label>
+        <input type="text" id="name" required>
+  
+        <label for="bloodType">Blood Type:</label>
+        <input type="text" id="bloodType" required>
+  
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" required>
+  
+        <button type="submit">Add Donor</button>
+      </form>
+  
+      <table id="donorTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Blood Type</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Donor data will appear here -->
+        </tbody>
+      </table>
+</div>
+
+<!--contact details-->
+<div class="container" id="contact" style="display: none;">
+    <h2>Contact Us</h2>
+    <p>Email: accident_detection_system123@gmail.com</p>
+    <p>Phone: +91 1234567890</p>
+    <p>Address: 123 Safety Road, Secure City, SC 98765</p>
+</div>
+
+<!--login details-->
+<div class="container" id="login" style="display: none;">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<!--register details-->
+<div class="container" id="register" style="display: none;">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input type="text" placeholder="Username" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Blood Group" required />
+        <input type="date" placeholder="Date of Birth" required />
+        <input type="tel" placeholder="Emergency Contact Number" required />
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+
+<!--alert box details-->
+<div class="alert" id="alertBox">
+    <strong>Alert!</strong> An accident has been detected. Emergency services have been notified.
+</div>
+
+
+
+<script>
+    const sections = document.querySelectorAll('.container');
+
+    function showPage(id) {
+        sections.forEach(section => {
+            if (section.id === id) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    function logout() {
+        alert('You have been logged out successfully.');
+        showPage('home');
+    }
+
+//**********************************************************blood js
+    // Get references to DOM elements
+const donorForm = document.getElementById('donorForm');
+const donorTable = document.getElementById('donorTable').getElementsByTagName('tbody')[0];
+
+// Handle form submission
+donorForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission from refreshing the page
+
+  // Get form input values
+  const name = document.getElementById('name').value;
+  const bloodType = document.getElementById('bloodType').value;
+  const contact = document.getElementById('contact').value;
+
+  // Add a new row to the table
+  const newRow = donorTable.insertRow();
+
+  const cell1 = newRow.insertCell(0);
+  const cell2 = newRow.insertCell(1);
+  const cell3 = newRow.insertCell(2);
+
+  cell1.textContent = name;
+  cell2.textContent = bloodType;
+  cell3.textContent = contact;
+
+  // Clear form inputs
+  donorForm.reset();
+});
+
+
+</script>
+
+</body>
+</html>
